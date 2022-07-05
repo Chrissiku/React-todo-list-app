@@ -20,6 +20,11 @@ class TodoItem extends Component {
       this.setState({ editing: false });
     }
   };
+
+  //Will mount lifecycle
+  componentWillUnmount() {
+    console.log("Cleaning up...");
+  }
   render() {
     const completedStyle = {
       fontStyle: "italic",
