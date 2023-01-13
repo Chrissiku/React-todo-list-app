@@ -19,4 +19,17 @@ const Button = ({ type, variant = "primary", children, ...rest }) => {
   );
 };
 
+const SelectButton = ({ id, children, ...rest }) => {
+  return (
+    <select
+      id={id}
+      {...rest}
+      className={getClasses([styles.app__button, styles.app__button__select])}
+    >
+      {children}
+    </select>
+  );
+};
+
+export { SelectButton };
 export default Button;
